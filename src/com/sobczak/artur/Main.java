@@ -9,8 +9,11 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the number for calculate: ");
 
-        Addition data = new Addition(scanner.nextInt(), scanner.nextInt());
-        System.out.println(data.additionalMethod(data));
+        Addition addition = new Addition(scanner.nextInt(), scanner.nextInt());
+        System.out.println(addition.additionalMethod(addition));
+
+        Subtraction subtraction = new Subtraction(scanner.nextInt(), scanner.nextInt());
+        System.out.println(subtraction.substractionMethod(subtraction));
 
 
     }

@@ -7,7 +7,8 @@ public class Multiplying extends Data {
     }
 
     public int multiplyingMethod(Data data){
-        return result += data1 * data2;
+        System.out.println("Result of the multiplaying is: ");
+        return result += getData1() * getData2();
     }
 
 }

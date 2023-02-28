@@ -7,8 +7,8 @@ public class Addition extends Data {
     }
 
     public int additionalMethod(Data data){
-        return result += data1 + data2;
+        System.out.println("Result of the additional is: ");
+        return result += getData1() + getData2();
     }
-
 
 }
