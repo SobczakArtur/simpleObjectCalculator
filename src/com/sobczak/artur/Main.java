@@ -48,17 +48,4 @@ public class Main {
             }
         }
     }
-//    private Data getNumber(){
-//        Scanner scanner = new Scanner(System.in);
-//        Data data = new Data(scanner.nextInt());
-//        return data;
-//    }
-//
-//    private char getCharakter(){
-//        char character;
-//        Scanner scanner = new Scanner(System.in);
-//        return character = scanner.next().charAt(0);
-//    }
-
-
 }
