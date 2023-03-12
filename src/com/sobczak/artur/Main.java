@@ -33,19 +33,15 @@ public class Main {
                 if (character == '+') {
                     data.setNumber2(scanner.nextInt());
                     addition.additionalMethod(data);
-//                data.setNumber1(0);
                 } else if (character == '-') {
                     data.setNumber2(scanner.nextInt());
                     subtraction.substractionMethod(data);
-//                data.setNumber1(0);
                 } else if (character == ':') {
                     data.setNumber2(scanner.nextInt());
                     division.divisionMethod(data);
-//                data.setNumber1(0);
                 } else if (character == '*') {
                     data.setNumber2(scanner.nextInt());
                     multiplying.multiplyingMethod(data);
-//                data.setNumber1(0);
                 } else if (character == '=') {
                     System.out.print("Result of the calculation is: ");
                     System.out.println(data.getResult());
