@@ -4,7 +4,7 @@ public class Subtraction {
 
     public double substractionMethod(Data data) {
 //        System.out.print("Result of the calculation is: ");
-        if (data.result > 0) {
+        if (data.result > 0 || data.result < 0) {
             data.result = data.getResult() - data.getNumber2();
             return data.result;
         } else {
