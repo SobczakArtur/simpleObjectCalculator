@@ -2,23 +2,28 @@ package com.sobczak.artur;
 
 public class Data {
 
-    private int data1;
-    public int result;
+    private double number1;
+    private double number2;
+    public double result;
 
-    public Data(int data1) {
-        this.data1 = data1;
-      //  this.result = result;
+    public double getNumber2() {
+        return number2;
     }
 
-    public void setResult(int result) {
-        this.result = result;
+    public void setNumber2(double number2) {
+        this.number2 = number2;
     }
 
-    public int getData1() {
-        return data1;
+    public double getNumber1() {
+        return number1;
     }
 
-    public int getResult() {
+    public void setNumber1(double number1) {
+        this.number1 = number1;
+    }
+
+    public double getResult() {
         return result;
     }
+
 }

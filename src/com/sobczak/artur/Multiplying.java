@@ -2,10 +2,15 @@ package com.sobczak.artur;
 
 public class Multiplying {
 
-    public int multiplyingMethod(Data data){
+    public double multiplyingMethod(Data data){
 //        System.out.print("Result of the calculation is: ");
-        data.result = data.result * data.getData1();
-        return data.result;
+        if (data.result > 0) {
+            data.result = data.getResult() * data.getNumber2();
+            return data.result;
+        } else {
+            data.result = data.getNumber1() * data.getNumber2();
+            return data.result;
+        }
     }
 
 }
