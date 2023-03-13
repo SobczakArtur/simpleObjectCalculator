@@ -18,36 +18,47 @@ public class Main {
         System.out.println("Kind of opperation: \n+ Addition\n- Subtration\n: Division\n* Multiplying\n= Result");
 
         Data data = new Data();
-        try {
-            data.setNumber1(scanner.nextInt());
-        } catch (InputMismatchException e){
-        System.out.println("Invalid data" + "\nPlease enter a numerical value");
-    }
+        boolean accessChar = true;
+        boolean accessNumber = true;
 
 
-        boolean access = true;
-        while (access) {
+        while (accessNumber) {
+            try {
+                data.setNumber1(getInt());
+                accessNumber = false;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid data" + "\nPlease enter a numerical value");
+            }
+        }
 
-            character = scanner.next().charAt(0);
+
+        while (accessChar) {
+
+            character = getChar().charAt(0);
 
                 if (character == '+') {
-                    data.setNumber2(scanner.nextInt());
+                    data.setNumber2(getInt());
                     addition.additionalMethod(data);
                 } else if (character == '-') {
-                    data.setNumber2(scanner.nextInt());
+                    data.setNumber2(getInt());
                     subtraction.substractionMethod(data);
                 } else if (character == ':') {
-                    data.setNumber2(scanner.nextInt());
+                    data.setNumber2(getInt());
                     division.divisionMethod(data);
                 } else if (character == '*') {
-                    data.setNumber2(scanner.nextInt());
+                    data.setNumber2(getInt());
                     multiplying.multiplyingMethod(data);
                 } else if (character == '=') {
                     System.out.print("Result of the calculation is: ");
                     System.out.println(data.getResult());
-                    access = false;
+                    accessChar = false;
                 }
-
         }
+    }
+    public static int getInt() {
+        return new Scanner(System.in).nextInt();
+    }
+    public static String getChar() {
+        return new Scanner(System.in).nextLine();
     }
 }
