@@ -12,14 +12,16 @@ public class Main {
         Division division = new Division();
         Multiplying multiplying = new Multiplying();
 
-        char character;
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the numbers for calculate: ");
         System.out.println("Kind of opperation: \n+ Addition\n- Subtration\n: Division\n* Multiplying\n= Result");
 
         Data data = new Data();
-        boolean accessChar = true;
+        char character = 0;
+        boolean accessOperation = true;
         boolean accessNumber = true;
+        boolean accessChar2 = true;
 
 
         while (accessNumber) {
@@ -32,26 +34,37 @@ public class Main {
         }
 
 
-        while (accessChar) {
+        while (accessOperation) {
 
-            character = getChar().charAt(0);
+            while (accessChar2) {
+                character = getChar().charAt(0);
+                if (character != '+' && character != '-' && character != ':' && character != '*' && character != '=' ) {
+                    System.out.println("This is invalid sign,\nplease use one of the correct.");
+                } else {
+                    accessChar2 = false;
+                }
+            }
 
                 if (character == '+') {
                     data.setNumber2(getInt());
                     addition.additionalMethod(data);
+                    accessChar2 = true;
                 } else if (character == '-') {
                     data.setNumber2(getInt());
                     subtraction.substractionMethod(data);
+                    accessChar2 = true;
                 } else if (character == ':') {
                     data.setNumber2(getInt());
                     division.divisionMethod(data);
+                    accessChar2 = true;
                 } else if (character == '*') {
                     data.setNumber2(getInt());
                     multiplying.multiplyingMethod(data);
+                    accessChar2 = true;
                 } else if (character == '=') {
                     System.out.print("Result of the calculation is: ");
                     System.out.println(data.getResult());
-                    accessChar = false;
+                    accessOperation = false;
                 }
         }
     }
