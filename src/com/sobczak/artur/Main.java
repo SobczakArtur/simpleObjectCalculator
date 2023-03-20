@@ -11,6 +11,5 @@ public class Main {
         System.out.println("Please enter the numbers for calculate: ");
         System.out.println("Kind of opperation: \n+ Addition\n- Subtration\n: Division\n* Multiplying\n= Result");
         operations.operationsMethod();
-        System.out.println("jsnx");
     }
 }
