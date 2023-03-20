@@ -6,9 +6,7 @@ public class Data {
     private double number2;
     public double result;
 
-    public double getNumber2() {
-        return number2;
-    }
+    public double getNumber2() { return number2; }
 
     public void setNumber2(double number2) {
         this.number2 = number2;
