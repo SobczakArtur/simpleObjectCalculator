@@ -4,7 +4,7 @@ public class Data {
 
     private double number1;
     private double number2;
-    public double result;
+    protected double result;
 
     public double getNumber2() { return number2; }
 

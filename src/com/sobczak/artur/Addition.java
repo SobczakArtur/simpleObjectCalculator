@@ -2,8 +2,7 @@ package com.sobczak.artur;
 
 public class Addition {
 
-    public double additionalMethod(Data data) {
-//        System.out.print("Result of the calculation is: ");
+    protected double additionalMethod(Data data) {
         if (data.result > 0 || data.result < 0) {
             data.result = data.getResult() + data.getNumber2();
             return data.result;
